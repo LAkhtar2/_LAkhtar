@@ -39,23 +39,60 @@
             background-color: white;
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 2px 10px #e99cc6(0, 0, 0, 0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
         }
-        h1, {
+
+        h1{
             color: white;
         }
-        
-        h2, p {
+
+        h2 {
             color: #e99cc6;
         }
+
+        h3 {
+            color: #e99cc6;
+            margin-top: 20px;
+        }
+
+        h4 {
+            color: #e99cc6;
+        }
+
+        h5{
+            color:  #e99cc6;
+        }
+
+        p {
+            color: #333333; 
+            line-height: 1.6; 
+        }
+
         ul {
             list-style-type: disc;
             padding-left: 20px;
-            color: #e99cc6;
+            color: #666666; 
         }
+
         li {
             margin-bottom: 10px;
         }
+
+        .experience-logo {
+            width: 100px;
+            height: auto;
+            margin: 20px;
+        }
+
+        .experience-section {
+            display: flex;
+            align-items: center;
+        }
+
+        .experience-description {
+            margin-left: 20px;
+        }
+
         footer {
             background-color: #e99cc6;
             color: white;
@@ -80,7 +117,7 @@
 </nav>
 
 <div class="container">
-    <h1>My Skills</h1>
+    <h2>My Skills</h2>
     <p>Throughout my academic journey and professional experiences, I have acquired a range of skills and knowledge that I continuously develop. Below are some of the key skills I have gained:</p>
     
     <h2>Technical Skills</h2>
@@ -90,17 +127,87 @@
         <li>Familiar with data analysis tools like Excel and basic SQL.</li>
     </ul>
 
-    <h2>Professional Experience</h2>
-    <ul>
-        <li><strong>Accenture Work Experience</strong>: Completed a work experience program with Accenture, gaining insights into consulting, project management, and client interaction.</li>
-        <li>Collaborated with multidisciplinary teams on projects, improving my communication and teamwork skills.</li>
-    </ul>
+    <h3>Professional Experience</h3>
 
-    <h2>Educational Achievements</h2>
-    <ul>
-        <li>Completed multiple LinkedIn Learning courses, enhancing my skills in areas such as Python programming, leadership, and business analysis.</li>
-        <li>Participated in several university-led projects, contributing to team-based assignments that strengthened my ability to work in group settings and manage deadlines.</li>
-    </ul>
+    <!-- Accenture Work Experience -->
+    <div class="experience-section">
+        <img src="file:///Users/laibaakhtar/Desktop/web%20app%20development/accenture.jpeg" alt="Accenture Logo" class="experience-logo">
+        <div class="experience-description">
+            <h4>Developer and Technology Virtual Experience Program</h4>
+            <h5><strong>Accenture UK & Ireland | 3 months</strong></h5>
+            <ul>
+                <li>Completed the Developer and Technology Job Simulation where I developed an end to end understanding of the Software Development Lifecycle.</li>
+                <li>Conducted in-depth research into emerging technology trends, particularly in the field of DevOps.</li>
+                <li>Created and delivered a compelling presentation analysing Waterfall and Agile methodologies.</li>
+                <li>Designed a custom algorithm using pseudocode and effectively communicated its logic by creating a detailed flow diagram.</li>
+                <li>Debugged a Python program by fixing syntax and logic errors in the code.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Barclays Work Experience -->
+    <div class="experience-section">
+        <img src="file:///Users/laibaakhtar/Desktop/web%20app%20development/barclays.jpeg" alt="Barclays Logo" class="experience-logo">
+        <div class="experience-description">
+            <h4>Barclays LifeSkills Virtual Experience</h4>
+            <h5><strong>Barclays | 1 month</strong></h5>
+            <ul>
+                <li>Gained insight into the inner workings of a digital transformation agency.</li>
+                <li>Worked with different departments on one project, solving problems and completing real-life tasks.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Vodafone Work Experience -->
+    <div class="experience-section">
+        <img src="file:///Users/laibaakhtar/Desktop/web%20app%20development/Vodafone%20logo%20PNG,%20vector%20file%20in%20(SVG,%20EPS)%20formats.jpeg" alt="Vodafone Logo" class="experience-logo">
+        <div class="experience-description">
+            <h4>Vodafone Innovators Virtual Experience</h4>
+            <h5><strong>Vodafone | 1 month</strong></h5>
+            <ul>
+                <li>Acquired a sound understanding of Vodafone’s inner workings and key concepts.</li>
+                <li>Identified the skills needed to pursue a career in the telecom sector.</li>
+                <li>Applied knowledge gained through quizzes, interactive exercises, and activities.</li>
+                <li>Developed a better understanding of career pathways within Vodafone.</li>
+                <li>Gained awareness of key employability and transferable skills.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Accenture Strategy Consulting -->
+    <div class="experience-section">
+        <img src="file:///Users/laibaakhtar/Desktop/web%20app%20development/accenture.jpeg" alt="Accenture Logo" class="experience-logo">
+        <div class="experience-description">
+            <h4>Accenture UK Strategy Consulting Experience</h4>
+            <h5><strong>Accenture UK & Ireland | 2 months</strong></h5>
+            <ul>
+                <li>Completed a simulation focused on implementing a BNPL (Buy Now, Pay Later) option for an e-commerce client.</li>
+                <li>Identified key issues the client was facing.</li>
+                <li>Provided recommendations based on market research.</li>
+                <li>Analysed data from the project launch to drive key insights.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Educational Experience -->
+    <h3>Educational Experience</h3> <!-- Align heading to the side -->
+    <div class="experience-section"> <!-- Use flexbox like other experience sections -->
+        <img src="file:///Users/laibaakhtar/Desktop/web%20app%20development/uni%20logo.png" alt="University of Salford Logo" class="experience-logo">
+        <div class="experience-description">
+            <h4>BSc Business Management with Innovation and Technology | 2023 - 2026</h4>
+            <ul>
+                <li>Used BI tools for data analysis and reporting.</li>
+                <li>Analysed data using Excel and introduction to Python.</li>
+                <li>Developed insights through descriptive and predictive analytics.</li>
+                <li>Explored emerging technologies (AI, blockchain, IoT) and their business impact.</li>
+                <li>Studied sustainability and digital disruption trends.</li> <!-- Fixed closing tag -->
+                <li>Developed digital communication and presentation skills.</li>
+                <li>Studied organisational structures, culture, and leadership.</li>
+                <li>Gained insight into change management and motivation strategies.</li>
+            </ul>
+        </div>
+    </div>
+
 </div>
 
 <footer>
@@ -109,3 +216,5 @@
 
 </body>
 </html>
+
+

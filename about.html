@@ -12,7 +12,7 @@
             background-color: #f4f4f4;
         }
         header {
-            background-image: url('file:///Users/laibaakhtar/Desktop/web%20app%20development/header.jpeg'); /* Use the uploaded image for the header background */
+            background-image: url('file:///Users/laibaakhtar/Desktop/web%20app%20development/header.jpeg'); 
             background-size: cover;
             background-position: center;
             color: white;
@@ -42,11 +42,7 @@
         }
         h1 {
             color: #e99cc6;
-            text-shadow: 
-                2px 2px 0 #ffffff, 
-                -2px 2px 0 #ffffff, 
-                2px -2px 0 #ffffff, 
-                -2px -2px 0 #ffffff; /* White outline around the text */
+            text-shadow: 2px 2px 0 #ffffff, -2px 2px 0 #ffffff, 2px -2px 0 #ffffff, -2px -2px 0 #ffffff;
         }
         .container {
             width: 80%;
@@ -60,7 +56,7 @@
             color: #e99cc6;
         }
         p {
-            color: #333333;
+            color: #333;
             line-height: 1.6;
         }
         footer {
@@ -72,16 +68,23 @@
         }
         .photography-section {
             display: flex;
-            align-items: flex-start;
+            flex-wrap: wrap;
+            justify-content: space-around;
             margin-top: 20px;
         }
         .photography-image {
-            width: 200px;
-            height: auto;
-            margin-right: 20px;
+            width: 45%;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+        .photography-image:hover {
+            transform: scale(1.05);
         }
         .photography-description {
-            max-width: 70%;
+            margin-top: 20px;
+            color: #555;
         }
     </style>
 </head>
@@ -93,25 +96,26 @@
 
 <nav>
     <a href="home.html">Home</a>
-    <a href="about.html" class="active">About</a>
-    <a href="contact.html">Contact</a>
+    <a href="about.html">About</a>
     <a href="skills.html">Skills</a>
+    <a href="contact.html">Contact</a>
 </nav>
 
 <div class="container">
     <h2>About Me</h2>
     <p>I am a second-year Business Management with IT student at the University of Salford. I am passionate about the intersection of business and technology and how IT can streamline business processes.</p>
     
-    <h3>Hobbies</h3>
-
-    <h4>Photography</h4>
+    <h3>Photography</h3>
     <h4>2016 - Present</h4>
-    
+    <p>In my spare time, I immerse myself in photography, a creative outlet I've been exploring since 2016. While studying photography for my A-Levels, I completed a final project titled “Personal Investigation,” where I researched various environmental issues, including climate change, oil pollution, and rising sea levels. I used these insights to guide my photographic work, capturing the impact of these crises on our planet. Below are some of the pieces I created during that time:</p>
+
     <div class="photography-section">
-        <img src="file:///Users/laibaakhtar/Desktop/web%20app%20development/photography.jpg" alt="Photography artwork by Laiba" class="photography-image">
-        <div class="photography-description">
-            <p>In my spare time, I immerse myself in photography, a creative outlet I've been exploring since 2016. While studying photography for my A-Levels, I completed a final project titled “Personal Investigation,” where I researched a variety of environmental issues, including climate change, oil pollution, and rising sea levels. I used these insights to guide my photographic work, capturing the impact of these crises on our planet. Below is one of the pieces I created during that time.</p>
-        </div>
+        <img src="file:///Users/laibaakhtar/Desktop/web%20app%20development/photography.jpg" alt="Photography Image 1" class="photography-image">
+        <img src="file:///Users/laibaakhtar/Desktop/web%20app%20development/photo2_page-0001.jpg" alt="Photography Image 2" class="photography-image">
+    </div>
+    
+    <div class="photography-description">
+        <p>These images showcase my creative interpretation of environmental crises. The use of dark tones mixed with vibrant colors represents the conflicting forces of destruction and hope. My goal was to evoke strong emotions and raise awareness of the damage we inflict on our planet, while also highlighting the resilience and beauty of nature amidst chaos.</p>
     </div>
 </div>
 
@@ -121,5 +125,7 @@
 
 </body>
 </html>
+
+
 
 

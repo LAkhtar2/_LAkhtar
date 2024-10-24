@@ -46,7 +46,7 @@
 
         nav a {
             margin: 0 15px;
-            color: #121212; /* Dark text color for links */
+            color: white; /* Change text color to white */
             text-decoration: none;
             font-size: 1.1em;
             font-weight: bold;
@@ -189,13 +189,29 @@
             max-height: 90%;
         }
 
-        @media (max-width: 768px) {
-            .skill-section div, .photography-section div {
-                width: 100%;
-            }
+        header {
+            background-image: url('file:///Users/laibaakhtar/Desktop/web%20app%20development/header.jpeg');
+            background-size: cover;
+            background-position: center 50%; /* Center the background */
+            height: 70vh;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            animation: subtleFloat 15s infinite ease-in-out; /* Subtle, slow movement */
+        }
 
-            header h1 {
-                font-size: 2em;
+        @keyframes subtleFloat {
+            0% {
+                background-position: center 48%; /* Move slightly up */
+            }
+            50% {
+                background-position: center 52%; /* Move slightly down */
+            }
+            100% {
+                background-position: center 48%; /* Return to original position */
             }
         }
     </style>
@@ -278,6 +294,7 @@
 
 </body>
 </html>
+
 
 
 

@@ -10,6 +10,13 @@
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .dark-theme {
+            background-color: #121212;
+            color: #e0e0e0;
         }
 
         header {
@@ -47,7 +54,7 @@
         }
 
         nav {
-            background-color: #fff;
+            background-color: #e99cc6;
             padding: 10px 0;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             position: sticky;
@@ -58,27 +65,37 @@
         }
 
         nav a {
-            color: #e99cc6;
+            color: white;
             text-decoration: none;
             margin: 0 15px;
             padding: 10px 20px;
-            font-weight: 600;
+            font-weight: bold;
             transition: color 0.3s ease, background-color 0.3s ease;
         }
 
-        nav a:hover, nav a.active {
-            background-color: #e99cc6;
+        nav a.active {
+            background-color: white;
+            color: #e99cc6;
+            border-radius: 20px;
+        }
+
+        nav a:hover {
+            background-color: #d98cb6;
             color: white;
-            border-radius: 50px;
         }
 
         .container {
             width: 80%;
-            margin: 20px auto;
+            margin: 40px auto;
             background-color: white;
             padding: 20px;
             border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s;
+        }
+
+        .dark-theme .container {
+            background-color: #1e1e1e;
         }
 
         h2, h3, h4 {
@@ -88,6 +105,22 @@
         p {
             color: #333;
             line-height: 1.6;
+        }
+
+        .dark-theme p {
+            color: #ccc;
+        }
+
+        .section {
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s;
+        }
+
+        .dark-theme .section {
+            background-color: #2a2a2a;
         }
 
         .photography-section {
@@ -115,11 +148,20 @@
             color: #555;
         }
 
+        .dark-theme .photography-description {
+            color: #bbb;
+        }
+
         footer {
             background-color: #e99cc6;
-            color: white;
+            color: #121212;
             text-align: center;
             padding: 20px 0;
+            margin-top: 20px;
+        }
+
+        .dark-theme footer {
+            color: #e0e0e0;
         }
 
         footer p {
@@ -146,56 +188,25 @@
             border-radius: 10px;
         }
 
-        /* Dark mode toggle button */
-        .dark-mode-toggle {
-            background-color: #e99cc6;
-            color: white;
-            border: none;
-            padding: 10px 20px;
+        /* Theme toggle button */
+        .theme-toggle {
             cursor: pointer;
-            border-radius: 50px;
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            transition: background-color 0.3s ease;
-        }
-
-        .dark-mode-toggle:hover {
-            background-color: #d98cb6;
-        }
-
-        /* Dark Mode */
-        body.dark-mode {
-            background-color: #121212;
-            color: white;
-        }
-
-        body.dark-mode .container {
-            background-color: #1e1e1e;
-        }
-
-        body.dark-mode nav {
-            background-color: #333;
-        }
-
-        body.dark-mode nav a {
-            color: #fff;
-        }
-
-        body.dark-mode nav a:hover, body.dark-mode nav a.active {
-            background-color: #d98cb6;
-        }
-
-        body.dark-mode footer {
-            background-color: #333;
-        }
-
-        .dark-mode-toggle {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
             background-color: #e99cc6;
+            color: white;
+            font-weight: bold;
+            margin: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .theme-toggle:hover {
+            background-color: #d98cb6;
         }
     </style>
 </head>
+
 <body>
 
 <header>
@@ -210,35 +221,68 @@
 </nav>
 
 <div class="container">
-    <h2>About Me</h2>
-    <p>I am a second-year Business Management with IT student at the University of Salford. I am passionate about the intersection of business and technology and how IT can streamline business processes.</p>
-    
-    <h3>Photography</h3>
-    <h4>2016 - Present</h4>
-    <p>In my spare time, I immerse myself in photography, a creative outlet I've been exploring since 2016. While studying photography for my A-Levels, I completed a final project titled “Personal Investigation,” where I researched various environmental issues, including climate change, oil pollution, and rising sea levels. I used these insights to guide my photographic work, capturing the impact of these crises on our planet. This is has helped me learn html and css easily as I was already aware of designing and how to plan, during my time taking photography as an A-Level I was to create and efolio, I had to design the layout and the colour scheme which has helped me during my time studying web development. Below are some of the pieces I created myself:</p>
 
-    <div class="photography-section">
-        <img src="file:///Users/laibaakhtar/Desktop/web%20app%20development/photography.jpg" alt="Photography Image 1" class="photography-image" onclick="openModal(this.src)">
-        <img src="file:///Users/laibaakhtar/Desktop/web%20app%20development/photo2_page-0001.jpg" alt="Photography Image 2" class="photography-image" onclick="openModal(this.src)">
+    <!-- About Me Section -->
+    <div class="section">
+        <h2>About Me</h2>
+        <p>I am a second-year Business Management with IT student at the University of Salford. I am passionate about the intersection of business and technology and how IT can streamline business processes.</p>
     </div>
-    
-    <div class="photography-description">
-        <p>These images showcase my creative interpretation of environmental crises. The use of dark tones mixed with vibrant colors represents the conflicting forces of destruction and hope. My goal was to evoke strong emotions and raise awareness of the damage we inflict on our planet, while also highlighting the resilience and beauty of nature amidst chaos.</p>
+
+    <!-- Photography Section -->
+    <div class="section">
+        <h3>Photography</h3>
+        <h4>2016 - Present</h4>
+        <p>In my spare time, I immerse myself in photography, a creative outlet I've been exploring since 2016. While studying photography for my A-Levels, I completed a final project titled “Personal Investigation,” where I researched various environmental issues, including climate change, oil pollution, and rising sea levels. Below are some of the pieces I created myself:</p>
+
+        <div class="photography-section">
+            <img src="file:///Users/laibaakhtar/Desktop/web%20app%20development/webapp2ndimg.jpg" alt="Photography Image 1" class="photography-image" onclick="openModal(this.src)">
+            <img src="file:///Users/laibaakhtar/Desktop/web%20app%20development/IMG_8484.jpg" alt="Photography Image 2" class="photography-image" onclick="openModal(this.src)">
+        </div>
+        
+        <div class="photography-description">
+            <p>These images showcase my creative interpretation of environmental crises. My goal was to evoke strong emotions and raise awareness of the damage we inflict on our planet, while also highlighting the resilience and beauty of nature amidst chaos.</p>
+        </div>
     </div>
 </div>
 
-<!-- Modal for full-size image -->
+<!-- Full-size Image Modal -->
 <div id="modal" class="modal" onclick="closeModal()">
     <img id="modalImage" src="" alt="Full-size Image">
 </div>
+
+<!-- Theme Toggle Button -->
+<button class="theme-toggle" id="theme-toggle">Toggle Dark/Light Theme</button>
 
 <footer>
     <p>&copy; 2024 Laiba Akhtar | University of Salford</p>
 </footer>
 
+<script>
+    // JavaScript to toggle theme
+    const toggleButton = document.getElementById('theme-toggle');
+    toggleButton.addEventListener('click', () => {
+        document.body.classList.toggle('dark-theme');
+    });
+
+    // Function to open modal for full-size image
+    function openModal(src) {
+        const modal = document.getElementById('modal');
+        const modalImage = document.getElementById('modalImage');
+        modalImage.src = src;
+        modal.style.display = 'flex';
+    }
+
+    // Function to close the modal
+    function closeModal() {
+        const modal = document.getElementById('modal');
+        modal.style.display = 'none';
+    }
+</script>
 
 </body>
 </html>
+
+
 
 
 

@@ -11,6 +11,7 @@
             padding: 0;
             background-color: #f8f9fa;
             color: #333;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
 
         header {
@@ -27,7 +28,6 @@
             position: relative;
         }
 
-        /* Adding a lighter overlay for better contrast */
         header::before {
             content: '';
             position: absolute;
@@ -35,7 +35,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.3); /* Lighter overlay */
+            background: rgba(0, 0, 0, 0.3);
         }
 
         header h1 {
@@ -56,7 +56,7 @@
             top: 0;
             z-index: 2;
             display: flex;
-            justify-content: center; /* Center the navigation */
+            justify-content: center;
         }
 
         nav a {
@@ -78,9 +78,19 @@
             width: 90%;
             margin: 40px auto;
             padding: 20px;
+        }
+
+        .section-box {
+            padding: 20px;
+            margin-bottom: 40px;
             background-color: white;
             border-radius: 12px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .section-box:hover {
+            transform: translateY(-5px);
         }
 
         h2, h3, h4, h5 {
@@ -108,12 +118,7 @@
             display: flex;
             align-items: flex-start;
             flex-wrap: wrap;
-            margin-bottom: 40px;
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .experience-section:hover {
-            transform: translateY(-5px);
+            margin-bottom: 20px;
         }
 
         .experience-logo {
@@ -123,12 +128,12 @@
             transition: transform 0.3s ease;
         }
 
-        .experience-description {
-            flex-grow: 1;
-        }
-
         .experience-logo:hover {
             transform: scale(1.1);
+        }
+
+        a {
+            text-decoration: underline;
         }
 
         footer {
@@ -177,7 +182,7 @@
             color: white;
         }
 
-        body.dark-mode .container {
+        body.dark-mode .section-box {
             background-color: #1e1e1e;
         }
 
@@ -196,170 +201,166 @@
         body.dark-mode footer {
             background-color: #333;
         }
+
+        body.dark-mode p, body.dark-mode ul, body.dark-mode li, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5 {
+            color: white;
+        }
     </style>
 </head>
-
 <body>
+    <header>
+        <h1>Skills and Achievements</h1>
+    </header>
 
-<header>
-    <h1>Skills and Achievements</h1>
-</header>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html" class="active">Skills</a>
+        <a href="contact.html">Contact</a>
+    </nav>
 
-<nav>
-    <a href="home.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="skills.html" class="active">Skills</a>
-    <a href="contact.html">Contact</a>
-</nav>
+    <div class="container">
+        <div class="section-box">
+            <h2>My Skills</h2>
+            <p>Throughout my academic journey and professional experiences, I have acquired a range of skills and knowledge that I continuously develop. Below are some of the key skills I have gained:</p>
+        </div>
 
-<div class="container">
-    <h2>My Skills</h2>
-    <p>Throughout my academic journey and professional experiences, I have acquired a range of skills and knowledge that I continuously develop. Below are some of the key skills I have gained:</p>
-    
-    <h2>Technical Skills</h2>
-    <ul>
-        <li>Proficient in Python, with foundational knowledge gained through university courses and hands-on projects.</li>
-        <li>Experience with team collaboration tools such as Microsoft Teams, Slack, and Trello.</li>
-        <li>Familiar with data analysis tools like Excel and basic SQL.</li>
-    </ul>
-
-    <h3>Professional Experience</h3>
-
-    <!-- Accenture Work Experience -->
-    <div class="experience-section">
-        <a href="https://www.accenture.com" target="_blank">
-            <img src="file:///Users/laibaakhtar/Desktop/web%20app%20development/accenture.jpeg" alt="Accenture Logo" class="experience-logo">
-        </a>
-        <div class="experience-description">
-            <h4>Developer and Technology Virtual Experience Program</h4>
-            <h5><strong>Accenture UK & Ireland | 3 months</strong></h5>
+        <div class="section-box">
+            <h2>Technical Skills</h2>
             <ul>
-                <li>Completed the Developer and Technology Job Simulation where I developed an end-to-end understanding of the Software Development Lifecycle.</li>
-                <li>Conducted in-depth research into emerging technology trends, particularly in the field of DevOps.</li>
-                <li>Created and delivered a compelling presentation analysing Waterfall and Agile methodologies.</li>
-                <li>Designed a custom algorithm using pseudocode and effectively communicated its logic by creating a detailed flow diagram.</li>
-                <li>Debugged a Python program by fixing syntax and logic errors in the code.</li>
+                <li>Proficient in Python, with foundational knowledge gained through university courses and hands-on projects.</li>
+                <li>Experience with team collaboration tools such as Microsoft Teams, Slack, and Trello.</li>
+                <li>Familiar with data analysis tools like Excel and basic SQL.</li>
             </ul>
+        </div>
+
+        <div class="section-box">
+            <h3>Professional Experience</h3>
+
+            <div class="experience-section">
+                <a href="https://www.accenture.com" target="_blank">
+                    <img src="file:///Users/laibaakhtar/Desktop/web%20app%20development/accenture.jpeg" alt="Accenture Logo" class="experience-logo">
+                </a>
+                <div class="experience-description">
+                    <h4>Developer and Technology Virtual Experience Program</h4>
+                    <h5><strong>Accenture UK & Ireland | 3 months</strong></h5>
+                    <ul>
+                        <li>Completed the Developer and Technology Job Simulation where I developed an end-to-end understanding of the Software Development Lifecycle.</li>
+                        <li>Conducted in-depth research into emerging technology trends, particularly in the field of DevOps.</li>
+                        <li>Created and delivered a compelling presentation analysing Waterfall and Agile methodologies.</li>
+                        <li>Designed a custom algorithm using pseudocode and effectively communicated its logic by creating a detailed flow diagram.</li>
+                        <li>Debugged a Python program by fixing syntax and logic errors in the code.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-section">
+                <a href="https://www.barclayslifeskills.com/" target="_blank">
+                    <img src="file:///Users/laibaakhtar/Desktop/web%20app%20development/barclays.jpeg" alt="Barclays Logo" class="experience-logo">
+                </a>
+                <div class="experience-description">
+                    <h4>Barclays LifeSkills Virtual Experience</h4>
+                    <h5><strong>Barclays | 1 month</strong></h5>
+                    <ul>
+                        <li>Gained insight into the inner workings of a digital transformation agency.</li>
+                        <li>Worked with different departments on one project, solving problems and completing real-life tasks.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-section">
+                <a href="https://www.vodafone.co.uk/" target="_blank">
+                    <img src="file:///Users/laibaakhtar/Desktop/web%20app%20development/Vodafone%20logo%20PNG,%20vector%20file%20in%20(SVG,%20EPS)%20formats.jpeg" alt="Vodafone Logo" class="experience-logo">
+                </a>
+                <div class="experience-description">
+                    <h4>Vodafone Innovators Virtual Experience</h4>
+                    <h5><strong>Vodafone | 1 month</strong></h5>
+                    <ul>
+                        <li>Acquired a sound understanding of Vodafone’s inner workings and key concepts.</li>
+                        <li>Identified the skills needed to pursue a career in the telecom sector.</li>
+                        <li>Applied knowledge gained through quizzes, interactive exercises, and activities.</li>
+                        <li>Developed a better understanding of career pathways within Vodafone.</li>
+                        <li>Gained awareness of key employability and transferable skills.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-section">
+                <a href="https://www.accenture.com" target="_blank">
+                    <img src="file:///Users/laibaakhtar/Desktop/web%20app%20development/accenture.jpeg" alt="Accenture Logo" class="experience-logo">
+                </a>
+                <div class="experience-description">
+                    <h4>Accenture UK Strategy Consulting Experience</h4>
+                    <h5><strong>Accenture UK & Ireland | 2 months</strong></h5>
+                    <ul>
+                        <li>Completed a simulation focused on implementing a BNPL (Buy Now, Pay Later) option for an e-commerce client.</li>
+                        <li>Identified key issues the client was facing.</li>
+                        <li>Provided recommendations based on market research.</li>
+                        <li>Analysed data from the project launch to drive key insights.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-box">
+            <h3>Educational Experience</h3>
+
+            <div class="experience-section">
+                <a href="https://www.salford.ac.uk/" target="_blank">
+                    <img src="file:///Users/laibaakhtar/Desktop/web%20app%20development/uni%20logo.png" alt="University of Salford Logo" class="experience-logo">
+                </a>
+                <div class="experience-description">
+                    <h4>BSc Business Management with Innovation and Technology | 2023 - 2026</h4>
+                    <ul>
+                        <li>Used BI tools for data analysis and reporting.</li>
+                        <li>Analysed data using Excel and introduction to Python.</li>
+                        <li>Developed insights through descriptive and predictive analytics.</li>
+                        <li>Explored emerging technologies (AI, blockchain, IoT) and their business impact.</li>
+                        <li>Studied sustainability and digital disruption trends.</li>
+                        <li>Developed digital communication and presentation skills.</li>
+                        <li>Studied organisational structures, culture, and leadership.</li>
+                        <li>Gained insight into change management and motivation strategies.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-section">
+                <a href="https://www.linkedin.com/learning/" target="_blank">
+                    <img src="file:///Users/laibaakhtar/Desktop/web%20app%20development/linkedin.jpeg" alt="LinkedIn Learning Logo" class="experience-logo">
+                </a>
+                <div class="experience-description">
+                    <h4>Completed LinkedIn Learning Courses</h4>
+                    <ul>
+                        <li>Microsoft Excel</li>
+                        <li>Microsoft Word</li>
+                        <li>Microsoft PowerPoint</li>
+                        <li>Microsoft Outlook</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 
-    <!-- Barclays Work Experience -->
-    <div class="experience-section">
-        <a href="https://www.barclayslifeskills.com/" target="_blank">
-            <img src="file:///Users/laibaakhtar/Desktop/web%20app%20development/barclays.jpeg" alt="Barclays Logo" class="experience-logo">
-        </a>
-        <div class="experience-description">
-            <h4>Barclays LifeSkills Virtual Experience</h4>
-            <h5><strong>Barclays | 1 month</strong></h5>
-            <ul>
-                <li>Gained insight into the inner workings of a digital transformation agency.</li>
-                <li>Worked with different departments on one project, solving problems and completing real-life tasks.</li>
-            </ul>
-        </div>
-    </div>
+    <footer>
+        <p>&copy; 2024 Laiba Akhtar | University of Salford</p>
+    </footer>
 
-    <!-- Vodafone Work Experience -->
-    <div class="experience-section">
-        <a href="https://www.vodafone.co.uk/" target="_blank">
-            <img src="file:///Users/laibaakhtar/Desktop/web%20app%20development/Vodafone%20logo%20PNG,%20vector%20file%20in%20(SVG,%20EPS)%20formats.jpeg" alt="Vodafone Logo" class="experience-logo">
-        </a>
-        <div class="experience-description">
-            <h4>Vodafone Innovators Virtual Experience</h4>
-            <h5><strong>Vodafone | 1 month</strong></h5>
-            <ul>
-                <li>Acquired a sound understanding of Vodafone’s inner workings and key concepts.</li>
-                <li>Identified the skills needed to pursue a career in the telecom sector.</li>
-                <li>Applied knowledge gained through quizzes, interactive exercises, and activities.</li>
-                <li>Developed a better understanding of career pathways within Vodafone.</li>
-                <li>Gained awareness of key employability and transferable skills.</li>
-            </ul>
-        </div>
-    </div>
+    <!-- Dark mode toggle button -->
+    <button class="dark-mode-toggle" id="theme-toggle">Toggle Theme</button>
 
-    <!-- Accenture Strategy Consulting -->
-    <div class="experience-section">
-        <a href="https://www.accenture.com" target="_blank">
-            <img src="file:///Users/laibaakhtar/Desktop/web%20app%20development/accenture.jpeg" alt="Accenture Logo" class="experience-logo">
-        </a>
-        <div class="experience-description">
-            <h4>Accenture UK Strategy Consulting Experience</h4>
-            <h5><strong>Accenture UK & Ireland | 2 months</strong></h5>
-            <ul>
-                <li>Completed a simulation focused on implementing a BNPL (Buy Now, Pay Later) option for an e-commerce client.</li>
-                <li>Identified key issues the client was facing.</li>
-                <li>Provided recommendations based on market research.</li>
-                <li>Analysed data from the project launch to drive key insights.</li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- Educational Experience -->
-    <h3>Educational Experience</h3>
-    <div class="experience-section">
-        <a href="https://www.salford.ac.uk/" target="_blank">
-            <img src="file:///Users/laibaakhtar/Desktop/web%20app%20development/uni%20logo.png" alt="University of Salford Logo" class="experience-logo">
-        </a>
-        <div class="experience-description">
-            <h4>BSc Business Management with Innovation and Technology | 2023 - 2026</h4>
-            <ul>
-                <li>Used BI tools for data analysis and reporting.</li>
-                <li>Analysed data using Excel and introduction to Python.</li>
-                <li>Developed insights through descriptive and predictive analytics.</li>
-                <li>Explored emerging technologies (AI, blockchain, IoT) and their business impact.</li>
-                <li>Studied sustainability and digital disruption trends.</li>
-                <li>Developed digital communication and presentation skills.</li>
-                <li>Studied organisational structures, culture, and leadership.</li>
-                <li>Gained insight into change management and motivation strategies.</li>
-            </ul>
-        </div>
-        <!-- LinkedIn Learning Courses -->
-    <div class="experience-section">
-        <a href="https://www.linkedin.com/learning/" target="_blank">
-            <img src="file:///Users/laibaakhtar/Desktop/web%20app%20development/linkedin.jpeg" alt="LinkedIn Learning Logo" class="experience-logo">
-        </a>
-        <div class="experience-description">
-            <h4>Completed LinkedIn Learning Courses</h4>
-            <ul>
-                <li>Microsoft Excel</li>
-                <li>Microsoft Word</li>
-                <li>Microsoft PowerPoint</li>
-                <li>Microsoft Outlook</li>
-            </ul>
-        </div>
-    </div>
-</div>
-
-<footer>
-    <p>&copy; 2024 Laiba Akhtar | University of Salford</p>
-</footer>
-
-<script>
-
-      // JavaScript to toggle theme
-      const toggleButton = document.getElementById('theme-toggle');
-    toggleButton.addEventListener('click', () => {
-        document.body.classList.toggle('dark-theme');
-    });
-
-    // Function to show full-size image
-    function showFullSize(src) {
-        const fullSizeModal = document.getElementById('fullSizeModal');
-        const fullSizeImage = document.getElementById('fullSizeImage');
-        fullSizeImage.src = src;
-        fullSizeModal.style.display = 'flex';
-    }
-
-    // Function to hide full-size image
-    function hideFullSize() {
-        const fullSizeModal = document.getElementById('fullSizeModal');
-        fullSizeModal.style.display = 'none';
-    }
-</script>
-
-
-
+    <script>
+        // Theme toggle
+        const toggleButton = document.getElementById('theme-toggle');
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+    </script>
 </body>
 </html>
+
+
+
+
 
 
 

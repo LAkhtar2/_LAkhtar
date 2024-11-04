@@ -37,7 +37,7 @@ The portfolio is built using:
 
 To view or edit this project locally:
 
-1. **Clone the repository** (replace with your actual repository URL):
+1. **Clone the repository** :
 
    ```bash
    git clone https://lakhtar2.github.io/_LAkhtar/
@@ -63,4 +63,4 @@ This portfolio is primarily for professional networking and sharing my work with
 
 Feel free to reach out for any inquiries or collaboration opportunities:
 
-- **Email**: ["mailto:l.akhtar2@edu.salford.ac.uk"](mailto:your.email@example.com)
+- **Email**: ["mailto:l.akhtar2@edu.salford.ac.uk"](mailto:l.akhtar2@edu.salford.ac.uk)

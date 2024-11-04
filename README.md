@@ -37,7 +37,7 @@ The portfolio is built using:
 
 To view or edit this project locally:
 
-1. **Clone the repository** (replace with your actual repository URL):
+1. **Clone the repository** :
 
    ```bash
    git clone https://lakhtar2.github.io/_LAkhtar/

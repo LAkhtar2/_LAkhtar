@@ -1,6 +1,4 @@
 # _LAkhtar
-creating a new repository
-
 
 # Laiba Akhtar's Personal Website
 
@@ -13,7 +11,6 @@ Welcome to my personal portfolio website! This site showcases my background, tec
 - [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
-- [License](#license)
 - [Contact](#contact)
 
 ---
@@ -62,15 +59,8 @@ This portfolio is primarily for professional networking and sharing my work with
 - Explore the **Technical Skills** and **Professional Experience** sections for details on my expertise.
 - View the **Photography** section for a glimpse into my creative side.
 
-## License
-
-This project is licensed under the MIT License, making it open for personal and educational use. Please contact me if you would like to use any specific content.
-
 ## Contact
 
 Feel free to reach out for any inquiries or collaboration opportunities:
 
-- **Email**: [your.email@example.com](mailto:your.email@example.com)
-- **LinkedIn**: [linkedin.com/in/your-profile](https://linkedin.com/in/your-profile)
-- **GitHub**: [github.com/your-username](https://github.com/your-username)
-
+- **Email**: ["mailto:l.akhtar2@edu.salford.ac.uk"](mailto:your.email@example.com)
